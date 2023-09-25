@@ -145,13 +145,13 @@ int linearSolve(int n, int m, double* a, double* b, double* x, int* pos,
 
 
   for(q = 0; q < k; q++){
-    if(t == 0){
+    //if(t == 0){
 
-    printMatrix(a, n, n, n);
-    printf("\n");
-    printMatrix(b, 1, n, n);
-  }
-  reduce_sum(p);
+    //printMatrix(a, n, n, n);
+    //printf("\n");
+    //printMatrix(b, 1, n, n);
+  //}
+  //reduce_sum(p);
 
     block_pos = findMaxBlock(q, n, m, k, l, a, block1, block2, mpos, mbres, epsA, t, p);
 
@@ -161,7 +161,7 @@ int linearSolve(int n, int m, double* a, double* b, double* x, int* pos,
     i1 = block_pos/k;
     j1 = block_pos - i1*k;
 
-    if(t == 0)printf("q: %d i: %d j: %d\n", q, i1, j1);
+    //if(t == 0)printf("q: %d i: %d j: %d\n", q, i1, j1);
 
     switchBlockLines(q, i1, n, m, k, l, a, b, block1, block3, t, p);
     switchBlockColumns(q, j1, n, m, k, l, a, pos, block1, block3, t, p);
